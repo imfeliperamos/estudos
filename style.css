@@ -1,0 +1,118 @@
+body {
+    background-color: #2C2726;
+
+}
+
+/* HEADER */
+.header-site {
+    background-color: #2C2726;
+    color: white;
+    padding: 1rem 2rem;
+  }
+  
+  /* Flexbox para alinhar logo + menu */
+  .container-header {
+    display: flex; /* Flexbox para alinhar logo + menu */
+    justify-content: space-between; /* Espaço entre logo e menu */
+    align-items: center;
+    padding: 0 2rem; /* 👈 Espaço nas laterais */
+    max-width: 1200px; /* 👈 Largura máxima opcional */
+    margin: 0 auto;    /* 👈 Centraliza o conteúdo */
+  }
+  
+  
+  /* Navegação */
+  .nav-site ul {
+    display: flex;   /* serve para colocar uma do lado da outra */
+    gap: 2rem;   /* Serve para separar a nav uma da outra */
+    list-style: none;   /* Serve para remover os pontos do <UL> */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-site a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'fira sans', sans-serif;
+  }
+  
+  .nav-site a:hover {
+    color: #f7945d; /* Destaque no hover */
+  }
+  
+
+  .hero-section {
+    position: relative; /* Para o efeito de sobreposição */
+    height: 100vh; /* Altura total da tela */
+    overflow: hidden; /* Para esconder o conteúdo que ultrapassa */
+  }
+
+
+  .hero-content {
+    color-scheme: light;
+    text-align: center;
+    background-image: url(assets/hero.webp);
+    background-size: cover;         /* Preenche sem distorcer */
+    background-position: center;    /* Centraliza a imagem */
+    background-repeat: no-repeat;   /* Evita repetições */
+    height: 79%;
+
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+    color: white;
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: "Outfit", sans-serif;
+    padding-top: 1em;
+    margin-bottom: 40px;
+  }
+  
+  /* Destaque colorido na palavra "Mushroom Foraging" */
+  .hero-content h1 span {
+    color: #F59C5C; /* Laranja */
+    font-size: 7.5rem;
+    padding-bottom: 1em;
+    font-family: "Outfit", sans-serif;
+  }
+  
+  /* Estilo dos parágrafos */
+  .hero-content p {
+    max-width: 750px;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem; /* 18px */
+    font-family: 'fira sans', sans-serif;
+    margin: 0 auto;
+    color: #E0EAEA;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 1440px) {
+    .hero-content h1 {
+      font-size: 3rem;
+    }
+  
+    .hero-content h1 span {
+      font-size: 5rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+
+    .hero-content {
+        color-scheme: light;
+        text-align: center;
+        background-image: url(assets/hero.webp);
+        background-size: cover;         /* Preenche sem distorcer */
+        background-position: center;    /* Centraliza a imagem */
+        background-repeat: no-repeat;   /* Evita repetições */
+        height: 80%;
+    
+      }
+  }
