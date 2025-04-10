@@ -1,177 +1,265 @@
 body {
-    background-color: #2C2726;
+  background-color: #2C2726;
 
 }
 
 /* HEADER */
 .header-site {
-    background-color: #2C2726;
-    color: white;
-    padding: 1rem 2rem;
-  }
-  
+  background-color: #2C2726;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+/* Flexbox para alinhar logo + menu */
+.container-header {
+  display: flex;
   /* Flexbox para alinhar logo + menu */
-  .container-header {
-    display: flex; /* Flexbox para alinhar logo + menu */
-    justify-content: space-between; /* Espaço entre logo e menu */
-    align-items: center;
-    padding: 0 2rem; /* 👈 Espaço nas laterais */
-    max-width: 1200px; /* 👈 Largura máxima opcional */
-    margin: 0 auto;    /* 👈 Centraliza o conteúdo */
+  justify-content: space-between;
+  /* Espaço entre logo e menu */
+  align-items: center;
+  padding: 0 2rem;
+  /* 👈 Espaço nas laterais */
+  max-width: 1200px;
+  /* 👈 Largura máxima opcional */
+  margin: 0 auto;
+  /* 👈 Centraliza o conteúdo */
+}
+
+
+/* Navegação */
+.nav-site ul {
+  display: flex;
+  /* serve para colocar uma do lado da outra */
+  gap: 2rem;
+  /* Serve para separar a nav uma da outra */
+  list-style: none;
+  /* Serve para remover os pontos do <UL> */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-site a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: 'fira sans', sans-serif;
+}
+
+.nav-site a:hover {
+  color: #f7945d;
+  /* Destaque no hover */
+}
+
+
+.hero-section {
+  position: relative;
+  /* Para o efeito de sobreposição */
+  height: 100vh;
+  /* Altura total da tela */
+  overflow: hidden;
+  /* Para esconder o conteúdo que ultrapassa */
+}
+
+
+.hero-content {
+  color-scheme: light;
+  text-align: center;
+  background-image: url(assets/hero.webp);
+  background-size: cover;
+  /* Preenche sem distorcer */
+  background-position: center;
+  /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  /* Evita repetições */
+  height: 79%;
+
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  color: white;
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: "Outfit", sans-serif;
+  padding-top: 1em;
+  margin-bottom: 40px;
+}
+
+/* Destaque colorido na palavra "Mushroom Foraging" */
+.hero-content h1 span {
+  color: #F59C5C;
+  /* Laranja */
+  font-size: 7.5rem;
+  padding-bottom: 1em;
+  font-family: "Outfit", sans-serif;
+}
+
+/* Estilo dos parágrafos */
+.hero-content p {
+  max-width: 750px;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  /* 18px */
+  font-family: 'fira sans', sans-serif;
+  margin: 0 auto;
+  color: #E0EAEA;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1440px) {
+  .hero-content h1 {
+    font-size: 3rem;
   }
-  
-  
-  /* Navegação */
-  .nav-site ul {
-    display: flex;   /* serve para colocar uma do lado da outra */
-    gap: 2rem;   /* Serve para separar a nav uma da outra */
-    list-style: none;   /* Serve para remover os pontos do <UL> */
-    margin: 0;
-    padding: 0;
+
+  .hero-content h1 span {
+    font-size: 5rem;
   }
-  
-  .nav-site a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
+
+  .hero-content p {
     font-size: 1rem;
-    font-family: 'fira sans', sans-serif;
+    padding: 0 1rem;
   }
-  
-  .nav-site a:hover {
-    color: #f7945d; /* Destaque no hover */
-  }
-  
-
-  .hero-section {
-    position: relative; /* Para o efeito de sobreposição */
-    height: 100vh; /* Altura total da tela */
-    overflow: hidden; /* Para esconder o conteúdo que ultrapassa */
-  }
-
 
   .hero-content {
     color-scheme: light;
     text-align: center;
     background-image: url(assets/hero.webp);
-    background-size: cover;         /* Preenche sem distorcer */
-    background-position: center;    /* Centraliza a imagem */
-    background-repeat: no-repeat;   /* Evita repetições */
-    height: 79%;
+    background-size: cover;
+    /* Preenche sem distorcer */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita repetições */
+    height: 91%;
 
   }
+}
 
-  .hero-content h1 {
-    font-size: 5rem;
-    color: white;
-    max-width: 90%;
-    margin: 0 auto;
-    font-family: "Outfit", sans-serif;
-    padding-top: 1em;
-    margin-bottom: 40px;
-  }
-  
-  /* Destaque colorido na palavra "Mushroom Foraging" */
-  .hero-content h1 span {
-    color: #F59C5C; /* Laranja */
-    font-size: 7.5rem;
-    padding-bottom: 1em;
-    font-family: "Outfit", sans-serif;
-  }
-  
-  /* Estilo dos parágrafos */
-  .hero-content p {
-    max-width: 750px;
-    line-height: 1.6;
-    margin-bottom: 1.2rem;
-    font-size: 1.2rem; /* 18px */
-    font-family: 'fira sans', sans-serif;
-    margin: 0 auto;
-    color: #E0EAEA;
-    margin-bottom: 10px;
-  }
 
-  @media (max-width: 1440px) {
-    .hero-content h1 {
-      font-size: 3rem;
-    }
-  
-    .hero-content h1 span {
-      font-size: 5rem;
-    }
-  
-    .hero-content p {
-      font-size: 1rem;
-      padding: 0 1rem;
-    }
+/* AGORA VOU CRIAR A SEGUNDA PARTE DA PÁGINA */
 
-    .hero-content {
-        color-scheme: light;
-        text-align: center;
-        background-image: url(assets/hero.webp);
-        background-size: cover;         /* Preenche sem distorcer */
-        background-position: center;    /* Centraliza a imagem */
-        background-repeat: no-repeat;   /* Evita repetições */
-        height: 91%;
-    
-      }
-  }
+.herotwo-section h1 {
+  max-width: 75%;
+  color: white;
+  font-size: 3em;
+  font-family: 'fira sans', sans-serif;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
 
-  
-  /* AGORA VOU CRIAR A SEGUNDA PARTE DA PÁGINA */
+.herotwo-section {
+  margin-top: -3%;
+}
 
+.herotwo-section p {
+  max-width: 75%;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'fira sans', sans-serif;
+  margin: 0 auto;
+}
+
+.article-section {
+  padding-bottom: 128px;
+}
+
+.column {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 75%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.column img {
+  border-radius: 7px;
+}
+
+.column-one {
+  flex: 1;
+  background-color: #393332;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.column h1 {
+  color: #F59C5C;
+  font-size: 2em;
+  font-family: 'outfit', sans-serif;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.column p {
+  color: #C2C8C8;
+  font-size: 1em;
+  font-family: 'fira sans', sans-serif;
+
+}
+
+.column-two {
+  flex: 1;
+  background-color: #393332;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.column-three {
+  flex: 1;
+  background-color: #393332;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
   .herotwo-section h1 {
-    max-width: 75%;
-    color: white;
-    font-size: 3em;
-    font-family: 'fira sans', sans-serif;
-    margin: 0 auto;
-    padding-bottom: 30px;
-  }
-
-  .herotwo-section {
-    margin-top: -3%;
+    font-size: 2em;
+    padding-top: -90%;
+    margin-left: 20px;
+    font-family: 'outfit', sans-serif;
   }
 
   .herotwo-section p {
-    max-width: 75%;
-    color: white;
-    font-size: 1.5em;
-    font-family: 'fira sans', sans-serif;
-    margin: 0 auto;
-  }
-
-  .article-section {
-    padding-bottom: 128px;
+    font-size: 1.25em;
+    color: #CBC8C8;
+    max-width: 86%;
+    margin-left: 20px;
+    margin-top: -15px;
+    padding-bottom: 30px;
+    font-family: 'outfit', sans-serif;
   }
 
   .column {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 75%;
+    max-width: 85%;
     margin: 0 auto;
     margin-top: 20px;
-  }
-  .column img {
-    border-radius: 7px;
+    max-width: 100%;
+    gap: 16px;
   }
 
-  .column-one {
-    flex: 1;
-    background-color: #393332;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
+  .column-one,
+  .column-two,
+  .column-three {
+    flex: none;
+    width: 100%;
+    max-width: 93%;
+    margin: 0 auto;
   }
 
   .column h1 {
     color: #F59C5C;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'outfit', sans-serif;
     text-align: left;
-    padding-top: 20px;
     padding-bottom: 10px;
   }
 
@@ -179,131 +267,8 @@ body {
     color: #C2C8C8;
     font-size: 1em;
     font-family: 'fira sans', sans-serif;
+    margin-top: 10px;
 
   }
 
-  .column-two {
-    flex: 1;
-    background-color: #393332;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-  }
-
-  .column-three {
-    flex: 1;
-    background-color: #393332;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-  }
-
-  @media (max-width: 768px) {
-    .herotwo-section h1 {
-      font-size: 2em;
-      padding-top: -90%;
-      margin-left: 20px;
-      font-family: 'outfit', sans-serif;
-    }
-  
-    .herotwo-section p {
-      font-size: 1.25em;
-      color: #CBC8C8;
-      max-width: 86%;
-      margin-left: 20px;
-      margin-top: -15px;
-      font-family: 'outfit', sans-serif;
-    }
-
-    .herotwo-section {
-      margin-top: -22%;
-    }
-
-    .column {
-      flex-wrap: wrap;
-      max-width: 85%;
-      margin: 0 auto;
-      margin-top: 20px;
-      max-width: 100%;
-      gap: 16px;
-    }
-
-    .column-one, .column-two, .column-three {
-      flex: none;
-      width: 100%;
-      max-width: 93%;
-      margin: 0 auto;
-    }
-
-    .column h1 {
-      color: #F59C5C;
-      font-size: 1.5em;
-      font-family: 'outfit', sans-serif;
-      text-align: left;
-      padding-bottom: 10px;
-    }
-  
-    .column p {
-      color: #C2C8C8;
-      font-size: 1em;
-      font-family: 'fira sans', sans-serif;
-      margin-top: 10px;
-  
-    }
-    
-  }
-
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 999;
-  }
-  
-  .menu-toggle .bar {
-    height: 4px;
-    width: 100%;
-    background-color: white;
-    border-radius: 2px;
-  }
-  
- /* Esconde o menu no mobile */
-.nav-site {
-  display: flex;
-  gap: 1rem;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-site {
-    display: none;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 1rem;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
-
-  .nav-site.active {
-    display: flex;
-  }
 }
